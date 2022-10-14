@@ -1,0 +1,29 @@
+[package]
+name = "advanced_networking"
+version = "0.1.0"
+edition = "2021"
+default-run = "client"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "common"
+path = "src/common/renderer.rs"
+
+[[bin]]
+name = "server"
+path = "src/server/main.rs"
+
+[[bin]]
+name = "client"
+path = "src/client/main.rs"
+
+
+[dependencies]
+glium = { version = "0.30.2", default-features = true }
+rand = "0.8"
+serde = { version = "1.0", features = ["derive"] }
+bincode = "1.2.1"
+imgui = "0.8.2"
+imgui-glium-renderer = "0.8.2"
+imgui-winit-support = "0.8.2"
